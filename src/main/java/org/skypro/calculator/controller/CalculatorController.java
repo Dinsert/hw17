@@ -24,22 +24,22 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String plusTwoNumber(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return valueOf(calculatorService.plusTwoNumber(num1, num2));
+    public double plusTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+        return calculatorService.plusTwoNumber(num1, num2);
     }
 
     @GetMapping("/minus")
-    public String minusTwoNumber(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return valueOf(calculatorService.minusTwoNumber(num1, num2));
+    public double minusTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+        return calculatorService.minusTwoNumber(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String multiplyTwoNumber(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return valueOf(calculatorService.multiplyTwoNumber(num1, num2));
+    public double multiplyTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+        return calculatorService.multiplyTwoNumber(num1, num2);
     }
 
     @GetMapping("/divide")
-    public String divideTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
-        return valueOf(calculatorService.divideTwoNumber(num1, num2));
+    public double divideTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+        return calculatorService.divideTwoNumber(num1, num2);
     }
 }
