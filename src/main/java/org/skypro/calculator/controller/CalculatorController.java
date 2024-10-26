@@ -1,7 +1,5 @@
 package org.skypro.calculator.controller;
 
-import static java.lang.String.*;
-
 import org.skypro.calculator.service.CalculatorService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,22 +22,22 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public double plusTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+    public double plusTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
         return calculatorService.plusTwoNumber(num1, num2);
     }
 
     @GetMapping("/minus")
-    public double minusTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+    public double minusTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
         return calculatorService.minusTwoNumber(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public double multiplyTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+    public double multiplyTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
         return calculatorService.multiplyTwoNumber(num1, num2);
     }
 
     @GetMapping("/divide")
-    public double divideTwoNumber(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+    public Double divideTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
         return calculatorService.divideTwoNumber(num1, num2);
     }
 }
