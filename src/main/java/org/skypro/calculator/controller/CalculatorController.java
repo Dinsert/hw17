@@ -22,22 +22,22 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public double plusTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
+    public double plusTwoNumber(@RequestParam(required = false) Double num1, @RequestParam(required = false) Double num2) {
         return calculatorService.plusTwoNumber(num1, num2);
     }
 
     @GetMapping("/minus")
-    public double minusTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
+    public double minusTwoNumber(@RequestParam(required = false) Double num1, @RequestParam(required = false) Double num2) {
         return calculatorService.minusTwoNumber(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public double multiplyTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
+    public double multiplyTwoNumber(@RequestParam(required = false) Double num1, @RequestParam(required = false) Double num2) {
         return calculatorService.multiplyTwoNumber(num1, num2);
     }
 
     @GetMapping("/divide")
-    public Double divideTwoNumber(@RequestParam(value = "num1", required = false) Double num1, @RequestParam(value = "num2", required = false) Double num2) {
+    public Double divideTwoNumber(@RequestParam(required = false) Double num1, @RequestParam(required = false) Double num2) {
         return calculatorService.divideTwoNumber(num1, num2);
     }
 }
